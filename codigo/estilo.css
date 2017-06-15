@@ -1,0 +1,44 @@
+* {
+    text-align: center;
+}
+.saida  td:nth-child(1) {
+	text-align: left;
+}
+.saida  td:nth-child(2) {
+	text-align: center;
+	width: 300
+}
+.saida  td:nth-child(3) {
+	text-align: center;
+	width: 300;
+}
+.entrada td:nth-child(1) {
+    text-align: right;
+}
+
+.entrada  td:nth-child(2) {
+    text-align: left;
+}
+
+th{
+    text-align: center;
+}
+.tableoutput{
+    padding-top: 10px;
+}
+output{
+    text-align: center;
+}
+
+
+table {
+    margin: auto;
+}
+h1, p {
+font-family: 'Ubuntu', sans-serif;
+}
+
+caption {
+    font-size: 2em;
+    font-family: 'Ubuntu', sans-serif;
+}
