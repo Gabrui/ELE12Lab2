@@ -5,10 +5,10 @@
  */
 
 /**
- * Calcula o coeficiente dieletrico efetivo
- * @param {number} k0 numero de onda padrao
+ * @function [beta] Calcula o coeficiente dieletrico efetivo
+ * @constant {number} k0 numero de onda padrao
  * @param {number} er constante dieletrica relativa
- * @param {number} c velocidade da luz
+ * @constant {number} c velocidade da luz
  * @param {number} f frequencia
  * @returns constante de propagacao
  */
@@ -19,9 +19,9 @@ function beta(f,er){
 }
 
 /**
- * Calcula a velocidade de fase em metros por segundo
+ * @function [vp] Calcula a velocidade de fase em metros por segundo
  * @param {number} ee coeficiente dieletrico efetivo
- * @param {number} c velocidade da luz
+ * @constant {number} c velocidade da luz
  * @returns velocidade de fase
  */
 function vp(ee){
