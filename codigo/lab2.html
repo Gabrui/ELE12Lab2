@@ -23,6 +23,7 @@
     </script>
 
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="estilo.css">
     
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -57,8 +58,11 @@
 <p></p>
 
 
-<p><button type="button" class='btn btn-warning' onclick="calcular()">Design</button>   <button type="button" class="btn btn-info" onclick="calcular()">Analisar</button></p>
-<!--<img src="src/drawing.png" alt="Toco Aberto em Paralelo" width="500"/> -->
+<p><button type="button" class='btn btn-warning' >Design<br><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+</button>   <button type="button" class="btn btn-info" >Analisar<br><i class="fa fa-search" aria-hidden="true"></i></button></p>
+<p><button type="button" class='btn btn-success' >Calcular<br><i class="fa fa-calculator" aria-hidden="true"></i>
+</button></p>
 
 
 
@@ -69,28 +73,27 @@
   <div class="col-md-6">
     <form  id="design_entradas">
     <table class ="entrada">
-        <th><td colsspan="2"></td></th>
+        <th><td colsspan="2" id='design_title'></td></th>
 
         <tr>
         <td>$\text{Impedância}\;\;Z_0:$</td> 
-        <td><input type="number" name="z0" step="any" value="60">$(\Omega)$ </td>
+        <td><input id='z0' type="number" name="z0" step="any" value="60">$(\Omega)$ </td>
         </tr>
 
         <tr>
         <td>$\text{Comprimento elétrico}\;\;\theta:$</td> 
-        <td><input type="number" name="theta" step="any" value="45">$(graus)$  </td>
+        <td><input id='theta' type="number" name="theta" step="any" value="45">$(graus)$  </td>
         </tr>
 
     </table>
     </form>
   </div>
 
-
   <div class="col-md-6">
-    <form  id="design_entradas" action="">
+    <form  id="analisar_entradas" action="">
     <table class ="entrada">
         
-        <th> <td colsspan="2" ></td></th>
+        <th> <td colsspan="2" id='analisar_title'></td></th>
 
         <tr>
         <td>$\text{Largura}\;\;W:$</td> 
@@ -106,7 +109,7 @@
     </form>
   </div>
 </div>
-
+<img src="microstrip.png" alt="Diagrama de uma microstrip" style="width:600px;height:300px;">
 
 
 

@@ -42,3 +42,29 @@ caption {
     font-size: 2em;
     font-family: 'Ubuntu', sans-serif;
 }
+.btn-warning{
+    box-shadow: 0 4px 0 0 #ef994d;
+    border:10px;
+}
+
+.btn-info{
+    box-shadow: 0 4px 0 0 #418aa3;
+}
+
+.pressed{
+    
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+}
+#analisar_title{
+    color:#418aa3;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+#design_title{
+    color:#ef994d;
+    font-size: 30px;
+    padding-bottom: 10px;
+
+}
