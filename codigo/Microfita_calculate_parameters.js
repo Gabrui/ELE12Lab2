@@ -5,6 +5,30 @@
  */
 
 /**
+ * @function [beta] Calcula o coeficiente dieletrico efetivo
+ * @constant {number} k0 numero de onda padrao
+ * @param {number} er constante dieletrica relativa
+ * @constant {number} c velocidade da luz
+ * @param {number} f frequencia
+ * @returns constante de propagacao
+ */
+function beta(f,er){
+    c = 300000000;
+    k0 = 2*Math.pi*f/c;
+    return k0*Math.sqrt(er);
+}
+
+/**
+ * @function [vp] Calcula a velocidade de fase em metros por segundo
+ * @param {number} ee coeficiente dieletrico efetivo
+ * @constant {number} c velocidade da luz
+ * @returns velocidade de fase
+ */
+function vp(ee){
+    c = 300000000;
+    return c/Math.sqrt(ee);
+}
+/**
  * Calcula o coeficiente dieletrico efetivo
  * @param {number} w espessura da fita condutora
  * @param {number} d espessura do dieletrico
