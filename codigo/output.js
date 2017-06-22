@@ -74,13 +74,12 @@ function wd(a, b, er, d, Z) {
     resultado2 = 8 * Math.exp(a) / (Math.exp(2 * a) - 2);
 
     var ee;
-
     ee = cde(er, d, d * resultado);
     erro = Math.pow(Z - Z0(d, d * resultado, ee), 2);
     ee = cde(er, d, d * resultado2);
     erro2 = Math.pow(Z - Z0(d, d * resultado2, ee), 2);
 
-    if (erro2 < erro) {
+    if ((erro2 < erro || resultado < 0 ) && resultado2 > 0) {
         resultado = resultado2;
     }
     return resultado;
@@ -135,6 +134,7 @@ function alfac(rs, z0, w) {
     return rs / (z0 * w);
 
 }
+
 
 $(document).ready(function () {
 
