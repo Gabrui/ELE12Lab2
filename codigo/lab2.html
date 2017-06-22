@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
     
@@ -58,9 +58,11 @@
 <p></p>
 
 
-<p><button type="button" class='btn btn-warning' >Design<br><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+<p>
+<button type="button" class='btn btn-warning' >Design<br><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>       
+<button type="button" class="btn btn-info" >Analisar<br><i class="fa fa-search" aria-hidden="true"></i></button>
+</p>
 
-</button>   <button type="button" class="btn btn-info" >Analisar<br><i class="fa fa-search" aria-hidden="true"></i></button></p>
 <p><button type="button" class='btn btn-success' >Calcular<br><i class="fa fa-calculator" aria-hidden="true"></i>
 </button></p>
 
@@ -109,7 +111,21 @@
     </form>
   </div>
 </div>
-<img src="microstrip.png" alt="Diagrama de uma microstrip" style="width:600px;height:300px;">
+
+<form id="alphad" action="">
+  <table class ="entrada">
+      <tr>
+        <td>$\text{Constante de atenuação no dielétrico}\;\;\alpha_d:$</td> 
+          <th>
+          <td colsspan="2" id='alphad_value'></td></th>
+
+      </tr>
+
+    </table>
+</form>
+
+    <img src="microstrip.png" alt="Diagrama de uma microstrip" style="width:600px;height:300px;">
+
 
 
 
