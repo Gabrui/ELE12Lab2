@@ -136,12 +136,13 @@ function alfac(rs, z0, w) {
 
 }
 
-$( document ).ready(function() {
+$(document).ready(function () {
 
 	var audio1 = new Audio('anvil.mp3');
 	var audio2 = new Audio('paper.mp3');
-	var design = false;
+	var design = true;
 	var analisar = false;
+
     $(".btn-warning").on("click", function(){
     	design = true;
     	analisar = false;
@@ -151,8 +152,6 @@ $( document ).ready(function() {
     	$('#analisar_title').text('Output')
 
     });
-
-
 
     $(".btn-info").on("click", function(){
     	design = false;
@@ -185,7 +184,6 @@ $( document ).ready(function() {
     	var z0         = values2['z0'];
     	var theta      = values2['theta'];
 
-		
     	var a = A(z0,epsilon);
     	var b = B(z0,epsilon);
     	var W = altura*wd(a,b,epsilon, altura, z0);
@@ -195,6 +193,7 @@ $( document ).ready(function() {
     	$('#L').val(L);
 		audio1.play();
     	}
+
     	else if(analisar)
     	{
     	var $inputs = $('#entradas1 :input');
