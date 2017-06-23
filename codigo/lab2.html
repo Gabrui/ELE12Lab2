@@ -49,9 +49,16 @@
       </tr>
       <tr>
         <td>$\text{Frequência}\;\;f:$</td> 
-        <td><input type="number" name="freq" step="any" value="1">$(GHz)$ </td>
+        <td><input type="number" name="freq" step="any" value="1">$(MHz)$ </td>
       </tr>
-      
+      <tr>
+        <td>$\text{Condutividade elétrica do dielétrico}\;\;\sigma:$</td> 
+        <td><input type="number" name="sigma" step="any" value="0.001">$(S/m)$ </td>
+      </tr>
+      <tr>
+        <td>$\text{Resistência Superficial (ou de folha)}\;\;R_s:$</td> 
+        <td><input type="number" name="rs" step="any" value="1">$(\Omega)$ </td>
+      </tr>
     </table>
 </form>
 
@@ -118,9 +125,30 @@
         <td>$\text{Constante de atenuação no dielétrico}\;\;\alpha_d:$</td> 
           <th>
           <td colsspan="2" id='alphad_value'></td></th>
-
       </tr>
 
+      <tr>
+        <td>$\text{Constante de atenuação no condutor}\;\;\alpha_c:$</td> 
+          <th>
+          <td colsspan="2" id='alphac_value'></td></th>
+      </tr>
+
+      <tr>
+        <td>$\text{Velocidade de Fase}\;\;v_p:$</td> 
+          <th>
+          <td colsspan="2" id='vp_value'></td></th>
+      </tr>
+
+      <tr>
+        <td>$\text{Constante de Propagação}\;\;\beta:$</td> 
+          <th>
+          <td colsspan="2" id='beta_value'></td></th>
+      </tr>
+      <tr>
+        <td>$\text{Constante dielétrica efetiva}\;\;\epsilon_e:$</td> 
+          <th>
+          <td colsspan="2" id='epsilone_value'></td></th>
+      </tr>
     </table>
 </form>
 
