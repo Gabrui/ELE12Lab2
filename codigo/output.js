@@ -68,11 +68,9 @@ function Z0(d, w, ee) {
 function wd(a, b, er, d, Z) {
     
     var resultado, resultado2, erro, erro2;
-
     resultado = 2 / Math.PI * (b - 1 - Math.log(2 * b - 1) + (er - 1) / (2 * er) * (Math.log(b - 1) + 0.39 - 0.61 / er));
 
     resultado2 = 8 * Math.exp(a) / (Math.exp(2 * a) - 2);
-
     var ee;
     ee = cde(er, d, d * resultado);
     erro = Math.pow(Z - Z0(d, d * resultado, ee), 2);
@@ -91,9 +89,9 @@ function wd(a, b, er, d, Z) {
  * @param {number} z0 impedancia intrinseca
  * @returns {number} coeficiente numerico
  */
-function A(z0,er){
-   
-    return (z0/60)*Math.sqrt((er+1)/2)+ ((er-1)/(er+1))*(0.23+0.11/er);
+function A(z0a,era){
+    var resul = (z0a/60)*Math.sqrt((era+1)/2) + ((era-1)/(era+1))*(0.23+0.11/era);
+    return resul;
 }
 
 /**
@@ -140,7 +138,7 @@ function alfac(rs, z0, w) {
 
 
 function arredonda(num) {
-	return Math.round(num * 1000) / 1000;
+	return Math.round(num * 100000) / 100000;
 }
 
 
@@ -187,13 +185,13 @@ $(document).ready(function () {
         values2[this.name] = $(this).val();
    		 });
 
-    	var epsilon    = values1['epsilon'];
-    	var altura     = values1['altura'];
-    	var frequencia = values1['freq']*1000000;
-	var sigma      = values1['sigma'];
-	var rs         = values1['rs'];
-    	var z0         = values2['z0'];
-    	var theta      = values2['theta'];
+    	var epsilon    = Number(values1['epsilon']);
+    	var altura     = Number(values1['altura']);
+    	var frequencia = Number(values1['freq'])*1000000;
+	var sigma      = Number(values1['sigma']);
+	var rs         = Number(values1['rs']);
+    	var z0         = Number(values2['z0']);
+    	var theta      = Number(values2['theta']);
 
     	var a = A(z0,epsilon);
     	var b = B(z0,epsilon);
@@ -201,7 +199,7 @@ $(document).ready(function () {
     	var cd_eff = cde(epsilon,altura,W);
     	var L = (theta * Math.PI / 180) / beta(frequencia, cd_eff);
     	$('#W').val(arredonda(W));
-    	$('#L').val(arredonda(L));
+    	$('#L').val(arredonda(L*1000));
 	document.getElementById("alphad_value").innerHTML = alfad(frequencia, sigma, epsilon, cd_eff).toFixed(4) +" Np/m";
 	document.getElementById('alphac_value').innerHTML = alfac(rs, z0, W).toFixed(4) +" Np/m";
 	document.getElementById('vp_value').innerHTML = vp(cd_eff).toFixed(0) +" m/s";
@@ -224,13 +222,13 @@ $(document).ready(function () {
         values2[this.name] = $(this).val();
    		 });
 
-    	var epsilon    = values1['epsilon'];
-    	var altura     = values1['altura'];
-    	var frequencia = values1['freq']*1000000;
-	var sigma      = values1['sigma'];
-	var rs         = values1['rs'];
-    	var W          = values2['largura'];
-    	var L          = values2['comprimento'];
+    	var epsilon    = Number(values1['epsilon']);
+    	var altura     = Number(values1['altura']);
+    	var frequencia = Number(values1['freq'])*1000000;
+	var sigma      = Number(values1['sigma']);
+	var rs         = Number(values1['rs']);
+    	var W          = Number(values2['largura']);
+    	var L          = Number(values2['comprimento'])/1000;
     	var cd_eff = cde(epsilon,altura,W);
     	var theta  = L * beta(frequencia, cd_eff) * 180 / Math.PI;
     	var z0     = Z0(altura,W,cd_eff);
