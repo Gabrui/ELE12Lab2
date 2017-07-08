@@ -72,10 +72,10 @@ function wd(a, b, er, d, Z) {
 
     resultado2 = 8 * Math.exp(a) / (Math.exp(2 * a) - 2);
     var ee;
-    ee = cde(er, d, d * resultado);
-    erro = Math.pow(Z - Z0(d, d * resultado, ee), 2);
-    ee = cde(er, d, d * resultado2);
-    erro2 = Math.pow(Z - Z0(d, d * resultado2, ee), 2);
+    ee = cde(er, 1, resultado);
+    erro = Math.abs(Z - Z0(1, resultado, ee));
+    ee = cde(er, 1, resultado2);
+    erro2 = Math.abs(Z - Z0(1, resultado2, ee));
 
     if ((erro2 < erro || resultado < 0 ) && resultado2 > 0) {
         resultado = resultado2;
